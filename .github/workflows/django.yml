@@ -32,10 +32,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Set up Python ${{matrix.pyversion}}
+    - name: Set up Python ${matrix.pyversion}
   	uses: actions/setup-python@v1
   	with:
-    	python-version: ${{matrix.pyversion}}
+    	python-version: ${matrix.pyversion}
 
     - name: psycopg2 prerequisites
       run: sudo apt-get install libpq-dev
